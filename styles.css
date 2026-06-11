@@ -15,3 +15,57 @@
 .navbar-nav .nav-link:hover:not(.active) {
     background-color: rgba(255, 255, 255, 0.1);
 }
+
+/*Homepage*/
+#homepage
+{
+    color: white;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    background-image: linear-gradient(#000000, #3e3e3e, #000000);
+    
+    background-blend-mode: multiply;
+}
+#hp_divider
+{
+    min-width: 260px;
+    width: 50vw;
+    height: 3px;
+    background-image: linear-gradient(to right, #00000000, #ffffff 40%, #ffffff 60%, #00000000);
+    margin-top: 1px;
+    margin-bottom: 10px;
+}
+
+.btn.hp_button
+{
+    --bs-btn-font-weight: 700;
+}
+
+
+#copyright
+{
+    bottom: 0;
+    position: absolute;
+    width: 100vw;
+    height: 30px;
+    background-color: #2B3035;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+#copyright_inner
+{
+    padding-right: 10px;
+    color: white;
+    font-size: 9px;
+}
+#current_year
+{
+    display: inline;
+}
