@@ -69,3 +69,39 @@
 {
     display: inline;
 }
+
+#contact_popup
+{
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    
+}
+#popup_content
+{
+    min-width: 200px;
+    width: 70vw;
+    height: 50vh;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #000000;
+    position: absolute;
+    z-index: 1050;
+}
+#popup_background
+{
+    position: absolute;
+    background-color: #00000031;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1040;
+}
+#popup_content_x
+{
+    width: 30px;
+    height: 30px;
+    background-color: white;
+}

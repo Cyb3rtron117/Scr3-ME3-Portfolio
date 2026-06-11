@@ -60,3 +60,16 @@ function showContact()
     });
     $("#contact_page").show();   
 }
+
+
+function showContactPopup()
+{
+    $("#contact_popup").show();
+}
+function hideContactPopup()
+{
+    $("#contact_popup").hide();
+}
+$("#contact_button_popup").on("click",showContactPopup)
+$("#popup_background").on("click",hideContactPopup)
+$("#popup_content_x").on("click",hideContactPopup)
