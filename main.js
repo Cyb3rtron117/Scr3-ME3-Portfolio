@@ -2,6 +2,12 @@ const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]
 const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, {
   trigger: 'hover' // Removes the 'focus' requirement
 }))
+$(document).on("click",function(){
+    setTimeout(function(){
+    $('[data-bs-toggle="tooltip"]').tooltip('hide');
+    },200);    // Hides tooltip in 100 milliseconds
+});
+
 const navbarButtons = $(".nav-link").toArray();
 const pages = $(".pages").toArray();
 pages.forEach(element => {
