@@ -4,6 +4,10 @@ const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstra
 }))
 const navbarButtons = $(".nav-link").toArray();
 const pages = $(".pages").toArray();
+pages.forEach(element => {
+    $(element).hide();
+    $("#homepage").show();  
+});
 const currentYear = new Date().getFullYear();
 $("#current_year").text(currentYear);
 

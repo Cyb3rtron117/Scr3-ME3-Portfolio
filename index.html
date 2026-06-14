@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <title>Dian Portfolio</title>
     <meta name="description" content="" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />    
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -17,7 +17,7 @@
   </head>
   <body>
     <nav
-      class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body "
+      class="navbar fixed-top navbar-expand-lg bg-body-tertiary bg-dark border-bottom border-body"
       data-bs-theme="dark"
     >
       <div class="container-fluid">
@@ -87,10 +87,10 @@
               target="_blank"
             >
               <img
-                src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-                alt="Bootstrap"
+                src="images/backgrounds/Rectangle 22.png"
+                alt="Mail"
                 width="30"
-                height="24"
+                height="30"
               />
             </a>
             <a
@@ -98,14 +98,14 @@
               data-bs-toggle="tooltip"
               data-bs-title="LinkedIn"
               data-bs-placement="bottom"
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://www.linkedin.com/in/dian-ehrke-23bb7b403/"
               target="_blank"
             >
               <img
-                src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-                alt="Bootstrap"
+                src="images/backgrounds/Rectangle 22.png"
+                alt="LinkedIn"
                 width="30"
-                height="24"
+                height="30"
               />
             </a>
             <a
@@ -113,14 +113,14 @@
               data-bs-toggle="tooltip"
               data-bs-title="Github"
               data-bs-placement="bottom"
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://github.com/Cyb3rtron117"
               target="_blank"
             >
               <img
-                src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-                alt="Bootstrap"
+                src="images/backgrounds/Rectangle 22.png"
+                alt="GitHub"
                 width="30"
-                height="24"
+                height="30"
               />
             </a>
             <a
@@ -128,14 +128,14 @@
               data-bs-toggle="tooltip"
               data-bs-title="Itch.io"
               data-bs-placement="bottom"
-              href="https://www.youtube.com/watch?v=dQw4w9WgXcQ"
+              href="https://cyb3rtron-117.itch.io/"
               target="_blank"
             >
               <img
-                src="https://getbootstrap.com/docs/5.3/assets/brand/bootstrap-logo.svg"
-                alt="Bootstrap"
+                src="images/backgrounds/Rectangle 22.png"
+                alt="Itch"
                 width="30"
-                height="24"
+                height="30"
               />
             </a>
           </ul>
@@ -148,33 +148,140 @@
       <h2 id="hp_h2">Gameplay Programmer</h2>
       <div id="hp_divider"></div>
       <div id="hp_buttons" class="d-flex flex-column flex-md-row gap-3">
-        <button class="hp_button btn btn-outline-light" onclick="showAbout()">About</button>
-        <button class="hp_button btn btn-outline-light" onclick="showPortfolio()">Portfolio</button>
-        <button class="hp_button btn btn-outline-light" onclick="showContact()">Contact</button>
+        <button class="hp_button btn btn-outline-light" onclick="showAbout()">
+          About
+        </button>
+        <button
+          class="hp_button btn btn-outline-light"
+          onclick="showPortfolio()"
+        >
+          Portfolio
+        </button>
+        <button class="hp_button btn btn-outline-light" onclick="showContact()">
+          Contact
+        </button>
       </div>
-      
     </div>
 
     <div id="about_page" class="pages"></div>
 
     <div id="portfolio_page" class="pages"></div>
 
-    <div id="contact_page" class="pages"></div>
+    <div id="contact_page" class="pages gap-4">
+      <h1>Contact Me:</h1>
+      <div class="contact_apps_links">
+        <a
+          class="app_icon"
+          data-bs-toggle="tooltip"
+          data-bs-title="Itch"
+          data-bs-placement="bottom"
+          target="_blank"
+          href="https://cyb3rtron-117.itch.io/"
+        >
+          <img
+            src="images/backgrounds/Rectangle 22.png"
+            alt="Itch"
+            width="100%"
+            height="100%"
+          />
+        </a>
+        <a
+          class="app_icon"
+          data-bs-toggle="tooltip"
+          data-bs-title="GitHub"
+          data-bs-placement="bottom"
+          target="_blank"
+          href="https://github.com/Cyb3rtron117"
+        >
+          <img
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GitHub"
+            width="100%"
+            height="100%"
+          />
+        </a>
+        <a
+          class="app_icon"
+          data-bs-toggle="tooltip"
+          data-bs-title="LinkedIn"
+          data-bs-placement="bottom"
+          target="_blank"
+          href="https://www.linkedin.com/in/dian-ehrke-23bb7b403/"
+        >
+          <img
+            src="images/backgrounds/Rectangle 22.png"
+            alt="LinkedIn"
+            width="100%"
+            height="100%"
+          />
+        </a>
+      </div>
+      <div class="contact_email">
+        <img
+          class="app_icon"
+          src="images/backgrounds/Rectangle 22.png"
+          alt="Mail"
+        />
+        <div>email.example.com</div>
+      </div>
+      Or:
+      <button
+        class="hp_button btn btn-outline-light"
+        onclick="showContactPopup()"
+      >
+        Send a Message:
+      </button>
+    </div>
 
-    <div id="contact_popup" style="display: none;">
+    <div id="contact_popup" style="display: none">
       <div id="popup_content">
-        <div id="popup_content_x">
+        <div id="popup_content_x"></div>
 
+        <div class="center">
+          <h1>Leave a Message:</h1>
+          <p>Name:</p>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Name"
+              aria-label="Name"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <p>Email:</p>
+          <div class="input-group mb-3">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="email@example.com"
+              aria-label="Email"
+              aria-describedby="basic-addon1"
+            />
+          </div>
+          <p>Message:</p>
+          <div class="input-group">
+            <textarea
+              class="form-control"
+              placeholder="Message"
+              aria-label="Message"
+            ></textarea>
+          </div>
+          <button id="contact_send" class="hp_button btn btn-outline-light">
+            Send
+          </button>
         </div>
       </div>
       <div id="popup_background"></div>
     </div>
 
     <div id="copyright">
-      <div id="copyright_inner"> &copy; Dian Ehrke <div id="current_year">2026</div></div>
+      <div id="copyright_inner">
+        &copy; Dian Ehrke
+        <div id="current_year">2026</div>
+      </div>
     </div>
 
-    
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
