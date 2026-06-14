@@ -78,6 +78,7 @@
     position: absolute;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     
 }
 #popup_content
@@ -98,6 +99,7 @@
     background-color: #00000031;
     width: 100vw;
     height: 100vh;
+    height: 100dvh;
     z-index: 1040;
 }
 #popup_content_x
