@@ -21,7 +21,8 @@
 {
     color: white;
     width: 100vw;
-    height: 100vh;
+    height: 100vh; /* Fallback for older browsers */
+    height: 100dvh; /* Dynamic height for modern mobile browsers */
     background-position: center;
     display: flex;
     flex-direction: column;
