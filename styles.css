@@ -4,7 +4,10 @@
     display: flex;
     flex-direction: row;
 }
-
+.navbar-nav
+{
+    text-align: center !important;
+}
 /* Style your active page block */
 .navbar-nav .nav-link.active {
     background-color: #454c54 !important; /*Block color */
@@ -42,17 +45,16 @@
     margin-top: 1px;
     margin-bottom: 10px;
 }
-
 .btn.hp_button
 {
     --bs-btn-font-weight: 700;
 }
 
-
+/*COPYRIGHT ICON*/
 #copyright
 {
     bottom: 0;
-    position: absolute;
+    position: fixed;
     width: 100vw;
     height: 30px;
     background-color: #2B3035;
@@ -62,7 +64,7 @@
 }
 #copyright_inner
 {
-    padding-right: 10px;
+    padding-right: 20px;
     color: white;
     font-size: 9px;
 }
@@ -70,7 +72,7 @@
 {
     display: inline;
 }
-
+/*CONTACT POPUP*/
 #contact_popup
 {
     top: 0;
@@ -135,6 +137,8 @@
 {
     margin-top: 20px;
 }
+
+/*CONTACT PAGE*/
 #contact_page
 {
     color: white;
@@ -175,4 +179,50 @@
     max-height: 35px;
     text-align: center;
     font-size: 1.5cqh;
+}
+
+/*ABOUT PAGE*/
+#about_page
+{
+    color: white;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    /*
+    height: 150vh; Fallback for older browsers
+    height: 150dvh; Dynamic height for modern mobile browsers
+    */
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(#000000, #3e3e3e, #000000);
+    
+    background-blend-mode: multiply;
+}
+#about_content
+{
+    margin-top: 57px;
+    width: 90%;
+    height: 90%;
+    display: flex;    
+    flex-direction: row;
+    align-items: flex-start;
+    font-size: 1.8cqh;
+    background-color: rgba(0, 0, 0, 0.082);
+    padding: 5%;
+}
+#PFP
+{
+    width: 30%;
+    aspect-ratio: 1 / 1;
+    max-width: 200px;
+}
+#about_text
+{
+    background-color: rgba(91, 91, 91, 0.231);
+    width: 90%;
+    height: fit-content;
+    padding: 10px;
 }
