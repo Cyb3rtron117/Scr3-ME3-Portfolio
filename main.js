@@ -80,6 +80,7 @@ $(window).on("hashchange", function () {
       // Matches any other page or back-button click
       // Cleanly hides any open popups
       $(".active_game").hide().removeClass("active_game");
+      hideContactPopup();
       break;
   }
 
