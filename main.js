@@ -40,40 +40,49 @@ $(window).on("hashchange", function () {
       pages.hide();
       $("#homepage").show();
       $(".active_game").hide().removeClass("active_game");
+      hideContactPopup();
       break;
 
     case "#about":
       pages.hide();
       $("#about_page").show();
       $(".active_game").hide().removeClass("active_game");
+      hideContactPopup();
       break;
 
     case "#portfolio":
       pages.hide();
       $("#portfolio_page").show();
       $(".active_game").hide().removeClass("active_game");
+      hideContactPopup();
       break;
 
     case "#contact":
       pages.hide();
       $("#contact_page").show();
       $(".active_game").hide().removeClass("active_game");
+      hideContactPopup();
       break;
     
     case "#portfolio/game1":
       $("#Game_Popup1").show().addClass("active_game");
+      hideContactPopup();
       break;
     case "#portfolio/game2":
       $("#Game_Popup2").show().addClass("active_game");
+      hideContactPopup();
       break;
     case "#portfolio/game3":
       $("#Game_Popup3").show().addClass("active_game");
+      hideContactPopup();
       break;
     case "#portfolio/game4":
       $("#Game_Popup4").show().addClass("active_game");
+      hideContactPopup();
       break;
     case "#portfolio/game5":
       $("#Game_Popup5").show().addClass("active_game");
+      hideContactPopup();
       break;
 
     default:
