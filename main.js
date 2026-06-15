@@ -10,10 +10,7 @@ $(document).on("click",function(){
 
 const navbarButtons = $(".nav-link").toArray();
 const pages = $(".pages").toArray();
-pages.forEach(element => {
-    $(element).hide();
-    $("#homepage").show();  
-});
+
 const currentYear = new Date().getFullYear();
 $("#current_year").text(currentYear);
 
@@ -31,6 +28,7 @@ function switchNav(button)
     } 
 }
 
+
 $("#home_button").on("click", showHome)
 function showHome() 
 {
@@ -38,7 +36,8 @@ function showHome()
     pages.forEach(element => {    
         $(element).hide()    
     });
-    $("#homepage").show();   
+    $("#homepage").show();
+    hideGames();
 }
 
 $("#about_button").on("click", showAbout)
@@ -48,7 +47,8 @@ function showAbout()
     pages.forEach(element => {    
         $(element).hide()    
     });
-    $("#about_page").show();   
+    $("#about_page").show();
+    hideGames();
 }
 
 $("#portfolio_button").on("click", showPortfolio)
@@ -58,7 +58,8 @@ function showPortfolio()
     pages.forEach(element => {    
         $(element).hide()    
     });
-    $("#portfolio_page").show();   
+    $("#portfolio_page").show();
+    hideGames();
 }
 
 $("#contact_button").on("click", showContact)
@@ -68,7 +69,8 @@ function showContact()
     pages.forEach(element => {    
         $(element).hide()    
     });
-    $("#contact_page").show();   
+    $("#contact_page").show();
+    hideGames(); 
 }
 
 
@@ -83,3 +85,37 @@ function hideContactPopup()
 $("#contact_button_popup").on("click",showContactPopup)
 $("#popup_background").on("click",hideContactPopup)
 $("#popup_content_x").on("click",hideContactPopup)
+
+
+function showGame1()
+{
+    $("#Game_Popup1").show();
+    $("#Game_Popup1").addClass("active_game");
+}
+function showGame2()
+{
+    $("#Game_Popup2").show();
+    $("#Game_Popup2").addClass("active_game");
+}
+function showGame3()
+{
+    $("#Game_Popup3").show();
+    $("#Game_Popup3").addClass("active_game");
+}
+function showGame4()
+{
+    $("#Game_Popup4").show();
+    $("#Game_Popup4").addClass("active_game");
+}
+function showGame5()
+{
+    $("#Game_Popup5").show();
+    $("#Game_Popup5").addClass("active_game");
+}
+function hideGames()
+{
+    var activegame = $(".active_game");
+    activegame.hide();
+    activegame.removeClass("active_game");
+}
+

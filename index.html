@@ -163,7 +163,7 @@
       </div>
     </div>
 
-    <div id="about_page" class="pages">
+    <div id="about_page" class="pages" style="display: none">
       <div id="about_content" class="d-flex flex-column flex-md-row gap-4">
         <img id="PFP" src="images/backgrounds/Rectangle 22.png" alt="Pfp" />
         <div id="about_text">
@@ -224,9 +224,62 @@
       </div>
     </div>
 
-    <div id="portfolio_page" class="pages"></div>
+    <div id="portfolio_page" class="pages" style="display: none">
+      <div id="PPHeading">
+        <h1>Games I worked on:</h1>
+        <p>Click on capsules to learn more</p>
+      </div>
+      <div
+        id="PPGames"
+        class="row row-cols-1 row-cols-md-4 row-cols-lg-4 row-cols-xl-4 row-cols-xxl-4 justify-content-center gap-4"
+      >
+        <button id="capsule1" class="game_capsule col" onclick="showGame1()">
+          <img
+            class="capsule_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="Game1"
+          />
+          <p>Clear the Deep!</p>
+        </button>
+        <button id="capsule2" class="game_capsule col" onclick="showGame2()">
+          <img
+            class="capsule_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="Game2"
+          />
+          <p>Deckloop!</p>
+        </button>
 
-    <div id="contact_page" class="pages gap-4">
+        <button id="capsule3" class="game_capsule col" onclick="showGame3()">
+          <img
+            class="capsule_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="Game3"
+          />
+          <p>Crafting Game</p>
+        </button>
+
+        <button id="capsule4" class="game_capsule col" onclick="showGame4()">
+          <img
+            class="capsule_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="Game4"
+          />
+          <p>EXTINCTION</p>
+        </button>
+
+        <button id="capsule4" class="game_capsule col" onclick="showGame5()">
+          <img
+            class="capsule_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="Game5"
+          />
+          <p>Game Hist</p>
+        </button>
+      </div>
+    </div>
+
+    <div id="contact_page" class="pages gap-4" style="display: none">
       <h1>Contact Me:</h1>
       <div class="contact_apps_links">
         <a
@@ -338,6 +391,382 @@
       <div id="copyright_inner">
         &copy; Dian Ehrke
         <div id="current_year">2026</div>
+      </div>
+    </div>
+
+    <div class="Game_Popup" id="Game_Popup1" style="display: none">
+      <button class="Game_back btn btn-outline-light" onclick="hideGames()">
+          Back
+      </button>
+      <div class="Game_top d-flex flex-column flex-md-row gap-5">
+        <img
+          class="game_image"
+          src="images/backgrounds/Rectangle 22.png"
+          alt="GameImg"
+        />
+        <div class="Top_text">
+          <h1>Game Title</h1>
+          <p>12/12/12 - 12/12/12</p>
+          <p>Engine</p>
+          <p>Team</p>
+          <p>Tag</p>
+        </div>
+      </div>
+      <div class="game_divider"></div>
+      <div class="Game_about">
+        <h1>About the game:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h1>My Contribution:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="contribution_images d-flex flex-column flex-md-row gap-3">
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+        </div>
+        <div>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="Game_Popup" id="Game_Popup2" style="display: none">
+      <button class="Game_back btn btn-outline-light" onclick="hideGames()">
+          Back
+      </button>
+      <div class="Game_top d-flex flex-column flex-md-row gap-5">
+        <img
+          class="game_image"
+          src="images/backgrounds/Rectangle 22.png"
+          alt="GameImg"
+        />
+        <div class="Top_text">
+          <h1>Game Title</h1>
+          <p>12/12/12 - 12/12/12</p>
+          <p>Engine</p>
+          <p>Team</p>
+          <p>Tag</p>
+        </div>
+      </div>
+      <div class="game_divider"></div>
+      <div class="Game_about">
+        <h1>About the game:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h1>My Contribution:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="contribution_images d-flex flex-column flex-md-row gap-3">
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+        </div>
+        <div>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="Game_Popup" id="Game_Popup3" style="display: none">
+      <button class="Game_back btn btn-outline-light" onclick="hideGames()">
+          Back
+      </button>
+      <div class="Game_top d-flex flex-column flex-md-row gap-5">
+        <img
+          class="game_image"
+          src="images/backgrounds/Rectangle 22.png"
+          alt="GameImg"
+        />
+        <div class="Top_text">
+          <h1>Game Title</h1>
+          <p>12/12/12 - 12/12/12</p>
+          <p>Engine</p>
+          <p>Team</p>
+          <p>Tag</p>
+        </div>
+      </div>
+      <div class="game_divider"></div>
+      <div class="Game_about">
+        <h1>About the game:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h1>My Contribution:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="contribution_images d-flex flex-column flex-md-row gap-3">
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+        </div>
+        <div>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="Game_Popup" id="Game_Popup4" style="display: none">
+      <button class="Game_back btn btn-outline-light" onclick="hideGames()">
+          Back
+      </button>
+      <div class="Game_top d-flex flex-column flex-md-row gap-5">
+        <img
+          class="game_image"
+          src="images/backgrounds/Rectangle 22.png"
+          alt="GameImg"
+        />
+        <div class="Top_text">
+          <h1>Game Title</h1>
+          <p>12/12/12 - 12/12/12</p>
+          <p>Engine</p>
+          <p>Team</p>
+          <p>Tag</p>
+        </div>
+      </div>
+      <div class="game_divider"></div>
+      <div class="Game_about">
+        <h1>About the game:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h1>My Contribution:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="contribution_images d-flex flex-column flex-md-row gap-3">
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+        </div>
+        <div>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+      </div>
+    </div>
+    <div class="Game_Popup" id="Game_Popup5" style="display: none">
+      <button class="Game_back btn btn-outline-light" onclick="hideGames()">
+          Back
+      </button>
+      <div class="Game_top d-flex flex-column flex-md-row gap-5">
+        <img
+          class="game_image"
+          src="images/backgrounds/Rectangle 22.png"
+          alt="GameImg"
+        />
+        <div class="Top_text">
+          <h1>Game Title</h1>
+          <p>12/12/12 - 12/12/12</p>
+          <p>Engine</p>
+          <p>Team</p>
+          <p>Tag</p>
+        </div>
+      </div>
+      <div class="game_divider"></div>
+      <div class="Game_about">
+        <h1>About the game:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.<br />
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
+        <h1>My Contribution:</h1>
+        <div>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
+          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
+          aliquip ex ea commodo consequat. <br />
+          Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+          dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui officia deserunt mollit anim id est
+          laborum.Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+          do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        </div>
+        <div class="contribution_images d-flex flex-column flex-md-row gap-3">
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+          <img
+            class="contribution_image"
+            src="images/backgrounds/Rectangle 22.png"
+            alt="GameImg"
+          />
+        </div>
+        <div>
+          Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris
+          nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
+          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+          culpa qui officia deserunt mollit anim id est laborum.
+        </div>
       </div>
     </div>
 
