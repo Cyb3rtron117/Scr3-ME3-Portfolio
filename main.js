@@ -1,121 +1,141 @@
-const tooltipTriggerList = document.querySelectorAll('[data-bs-toggle="tooltip"]')
-const tooltipList = [...tooltipTriggerList].map(tooltipTriggerEl => new bootstrap.Tooltip(tooltipTriggerEl, {
-  trigger: 'hover' // Removes the 'focus' requirement
-}))
-$(document).on("click",function(){
-    setTimeout(function(){
-    $('[data-bs-toggle="tooltip"]').tooltip('hide');
-    },200);    // Hides tooltip in 100 milliseconds
+const tooltipTriggerList = document.querySelectorAll(
+  '[data-bs-toggle="tooltip"]',
+);
+const tooltipList = [...tooltipTriggerList].map(
+  (tooltipTriggerEl) =>
+    new bootstrap.Tooltip(tooltipTriggerEl, {
+      trigger: "hover", // Removes the 'focus' requirement
+    }),
+);
+$(document).on("click", function () {
+  setTimeout(function () {
+    $('[data-bs-toggle="tooltip"]').tooltip("hide");
+  }, 200); // Hides tooltip in 100 milliseconds
 });
 
-const navbarButtons = $(".nav-link").toArray();
-const pages = $(".pages").toArray();
+const pages = $(".pages");
 
 const currentYear = new Date().getFullYear();
 $("#current_year").text(currentYear);
 
-const navbarCollapseEl = $('#navbarSupportedContent');
-
-function switchNav(button) 
-{
-    $(".active").removeClass("active");
-    $(button).addClass("active");  //makes the correct button look active
-
-    //collapses the navbar on mobile when button is clicked
-    if ($(navbarCollapseEl).hasClass('show')) {
-        const bsCollapse = bootstrap.Collapse.getOrCreateInstance(navbarCollapseEl);            
-        bsCollapse.hide();
-    } 
-}
+const navbarCollapseEl = $("#navbarSupportedContent");
 
 
-$("#home_button").on("click", showHome)
-function showHome() 
-{
-    switchNav("#home_button");
-    pages.forEach(element => {    
-        $(element).hide()    
-    });
-    $("#homepage").show();
-    hideGames();
+//I DID THE FOLLOWING SECTION BECAUSE IT BOTHERED ME THAT THE LINK AT THE TOP WOULDNT MATCH THE PAGE
+
+$(window).on("hashchange", function () {
+  var currentHash = window.location.hash;
+
+  const pages = $(".pages");
+
+  // Mobile navbar Menu Auto-Collapse
+  if (navbarCollapseEl.hasClass("show")) {
+    bootstrap.Collapse.getOrCreateInstance(navbarCollapseEl).hide();
+  }
+  //Game Popups and Pages
+  switch (currentHash) {
+
+    case "":
+    case "#home":
+      pages.hide();
+      $("#homepage").show();
+      $(".active_game").hide().removeClass("active_game");
+      break;
+
+    case "#about":
+      pages.hide();
+      $("#about_page").show();
+      $(".active_game").hide().removeClass("active_game");
+      break;
+
+    case "#portfolio":
+      pages.hide();
+      $("#portfolio_page").show();
+      $(".active_game").hide().removeClass("active_game");
+      break;
+
+    case "#contact":
+      pages.hide();
+      $("#contact_page").show();
+      $(".active_game").hide().removeClass("active_game");
+      break;
+    
+    case "#portfolio/game1":
+      $("#Game_Popup1").show().addClass("active_game");
+      break;
+    case "#portfolio/game2":
+      $("#Game_Popup2").show().addClass("active_game");
+      break;
+    case "#portfolio/game3":
+      $("#Game_Popup3").show().addClass("active_game");
+      break;
+    case "#portfolio/game4":
+      $("#Game_Popup4").show().addClass("active_game");
+      break;
+    case "#portfolio/game5":
+      $("#Game_Popup5").show().addClass("active_game");
+      break;
+
+    default:
+      // Matches any other page or back-button click
+      // Cleanly hides any open popups
+      $(".active_game").hide().removeClass("active_game");
+      break;
+  }
+
+  //Navbar Highlights Synced
+  $(".nav-link").removeClass("active").removeAttr("aria-current");
+  $('.nav-link[href="' + currentHash + '"]')
+    .addClass("active")
+    .attr("aria-current", "page");
+});
+$(window).trigger('hashchange');
+
+$("#home_button").on("click", showHome);
+function showHome() {
+  window.location.href = "#home"; //mimics the <a> thing
 }
 
-$("#about_button").on("click", showAbout)
-function showAbout() 
-{
-    switchNav("#about_button");
-    pages.forEach(element => {    
-        $(element).hide()    
-    });
-    $("#about_page").show();
-    hideGames();
+$("#about_button").on("click", showAbout);
+function showAbout() {
+  window.location.href = "#about"; //mimics the <a> thing
 }
 
-$("#portfolio_button").on("click", showPortfolio)
-function showPortfolio() 
-{
-    switchNav("#portfolio_button");
-    pages.forEach(element => {    
-        $(element).hide()    
-    });
-    $("#portfolio_page").show();
-    hideGames();
+$("#portfolio_button").on("click", showPortfolio);
+function showPortfolio() {
+  window.location.href = "#portfolio"; //mimics the <a> thing
 }
 
-$("#contact_button").on("click", showContact)
-function showContact() 
-{
-    switchNav("#contact_button");
-    pages.forEach(element => {    
-        $(element).hide()    
-    });
-    $("#contact_page").show();
-    hideGames(); 
+$("#contact_button").on("click", showContact);
+function showContact() {
+  window.location.href = "#contact"; //mimics the <a> thing
 }
 
+function showContactPopup() {
+  $("#contact_popup").show();
+}
+function hideContactPopup() {
+  $("#contact_popup").hide();
+}
+$("#contact_button_popup").on("click", showContactPopup);
+$("#popup_background").on("click", hideContactPopup);
+$("#popup_content_x").on("click", hideContactPopup);
 
-function showContactPopup()
-{
-    $("#contact_popup").show();
+function showGame1() {
+  window.location.href = "#portfolio/game1"; //changes the link at the top back to match the page
 }
-function hideContactPopup()
-{
-    $("#contact_popup").hide();
+function showGame2() {
+  window.location.href = "#portfolio/game2"; //changes the link at the top back to match the page
 }
-$("#contact_button_popup").on("click",showContactPopup)
-$("#popup_background").on("click",hideContactPopup)
-$("#popup_content_x").on("click",hideContactPopup)
-
-
-function showGame1()
-{
-    $("#Game_Popup1").show();
-    $("#Game_Popup1").addClass("active_game");
+function showGame3() {
+  window.location.href = "#portfolio/game3"; //changes the link at the top back to match the page
 }
-function showGame2()
-{
-    $("#Game_Popup2").show();
-    $("#Game_Popup2").addClass("active_game");
+function showGame4() {
+  window.location.href = "#portfolio/game4"; //changes the link at the top back to match the page
 }
-function showGame3()
-{
-    $("#Game_Popup3").show();
-    $("#Game_Popup3").addClass("active_game");
+function showGame5() {
+  window.location.href = "#portfolio/game5"; //changes the link at the top back to match the page
 }
-function showGame4()
-{
-    $("#Game_Popup4").show();
-    $("#Game_Popup4").addClass("active_game");
+function hideGames() {
+  window.location.href = "#portfolio"; //changes the link at the top back to portfolio to match the page
 }
-function showGame5()
-{
-    $("#Game_Popup5").show();
-    $("#Game_Popup5").addClass("active_game");
-}
-function hideGames()
-{
-    var activegame = $(".active_game");
-    activegame.hide();
-    activegame.removeClass("active_game");
-}
-
