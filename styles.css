@@ -375,7 +375,6 @@ html, body {
 .game_image
 {
     width: 200px;
-    height: 200px;
 }
 .Top_text
 {
@@ -405,8 +404,20 @@ html, body {
 }
 .contribution_image
 {
+    width: 300px;
+}
+.contribution_image.small
+{
     width: 200px;
-    height: 200px;
+}
+.contribution_image.big
+{
+    width: 360px;
+}
+.contribution_stuff
+{
+    height: auto;
+    text-align: center;
 }
 
 
