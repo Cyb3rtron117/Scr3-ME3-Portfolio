@@ -75,7 +75,7 @@ $(window).on("hashchange", function () {
   var currentHash = window.location.hash;
 
   const pages = $(".pages");
-
+  
   // Mobile navbar Menu Auto-Collapse
   if (navbarCollapseEl.hasClass("show")) {
     bootstrap.Collapse.getOrCreateInstance(navbarCollapseEl).hide();
@@ -146,5 +146,8 @@ $(window).on("hashchange", function () {
   $('.nav-link[href="' + currentHash + '"]')
     .addClass("active")
     .attr("aria-current", "page");
+
+  //Reset scroll position
+  window.scrollTo(0, 0);
 });
 $(window).trigger('hashchange');
