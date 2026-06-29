@@ -90,6 +90,9 @@ html, body {
     padding-right: 20px;
     color: white;
     font-size: 9px;
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
 }
 #current_year
 {
@@ -115,7 +118,7 @@ html, body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #000000;
+    background-color: #000000ad;
     position: absolute;
     z-index: 1050;
 
@@ -130,7 +133,7 @@ html, body {
 #popup_background
 {
     position: absolute;
-    background-color: #00000031;
+    background-color: #0000008f;
     width: 100vw;
     height: 100vh;
     height: 100dvh;
@@ -140,8 +143,10 @@ html, body {
 {
     width: 30px;
     height: 30px;
-    background-color: white;
     position: absolute;
+    left: 0%;
+    top: 0%;
+    border-radius: 1%;
 }
 .center
 {
@@ -155,9 +160,9 @@ html, body {
     justify-content: center;
     align-items: center;
 }
-#contact_send
+.center .wide
 {
-    margin-top: 20px;
+    width: 100%;
 }
 
 /*CONTACT PAGE*/
@@ -182,7 +187,7 @@ html, body {
 {
     width: 60%;
     height: 9vw;    
-    max-height: 70px;
+    max-height: 100px;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
@@ -196,7 +201,7 @@ html, body {
     gap: 20px;
     width: 50%;
     height: 5vh;
-    max-height: 35px;
+    max-height: 40px;
     text-align: center;
     font-size: 1.5cqh;
 }

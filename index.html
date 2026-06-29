@@ -93,7 +93,7 @@
               target="_blank"
             >
               <img
-                src="images/backgrounds/Rectangle 22.png"
+                src="images/logos/mail icon.png"
                 alt="Mail"
                 width="30"
                 height="30"
@@ -108,7 +108,7 @@
               target="_blank"
             >
               <img
-                src="images/backgrounds/Rectangle 22.png"
+                src="images/logos/linkedin-logo.png"
                 alt="LinkedIn"
                 width="30"
                 height="30"
@@ -123,7 +123,7 @@
               target="_blank"
             >
               <img
-                src="images/backgrounds/Rectangle 22.png"
+                src="images/logos/GitHub_Invertocat_White_Clearspace.png"
                 alt="GitHub"
                 width="30"
                 height="30"
@@ -138,7 +138,7 @@
               target="_blank"
             >
               <img
-                src="images/backgrounds/Rectangle 22.png"
+                src="images/logos/itchio-logo-textless-white.png"
                 alt="Itch"
                 width="30"
                 height="30"
@@ -171,7 +171,7 @@
 
     <div id="about_page" class="pages" style="display: none">
       <div id="about_content" class="d-flex flex-column flex-md-row gap-4">
-        <img id="PFP" src="images/backgrounds/Rectangle 22.png" alt="Pfp" />
+        <img id="PFP" src="images/backgrounds/Pfp.jpg" alt="Pfp" />
         <div id="about_text">
           <h1>Hello, I'm Dian Ehrke</h1>
           <div>
@@ -297,7 +297,7 @@
           href="https://cyb3rtron-117.itch.io/"
         >
           <img
-            src="images/backgrounds/Rectangle 22.png"
+            src="images/logos/itchio-logo-textless-white.png"
             alt="Itch"
             width="100%"
             height="100%"
@@ -312,7 +312,7 @@
           href="https://github.com/Cyb3rtron117"
         >
           <img
-            src="images/backgrounds/Rectangle 22.png"
+            src="images/logos/GitHub_Invertocat_White_Clearspace.png"
             alt="GitHub"
             width="100%"
             height="100%"
@@ -327,7 +327,7 @@
           href="https://www.linkedin.com/in/dian-ehrke-23bb7b403/"
         >
           <img
-            src="images/backgrounds/Rectangle 22.png"
+            src="images/logos/linkedin-logo.png"
             alt="LinkedIn"
             width="100%"
             height="100%"
@@ -337,10 +337,10 @@
       <div class="contact_email">
         <img
           class="app_icon"
-          src="images/backgrounds/Rectangle 22.png"
+          src="images/logos/mail icon.png"
           alt="Mail"
         />
-        <div>email.example.com</div>
+        <div>dianehrke192@gmail.com</div>
       </div>
       Or:
       <button
@@ -353,50 +353,46 @@
 
     <div id="contact_popup" style="display: none">
       <div id="popup_content">
-        <div id="popup_content_x"></div>
+        <img src="images/logos/X icon.png" id="popup_content_x">
 
-        <div class="center">
-          <h1>Leave a Message:</h1>
-          <p>Name:</p>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Name"
-              aria-label="Name"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <p>Email:</p>
-          <div class="input-group mb-3">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="email@example.com"
-              aria-label="Email"
-              aria-describedby="basic-addon1"
-            />
-          </div>
-          <p>Message:</p>
-          <div class="input-group">
+        <div class="center">          
+          <form
+            action="https://formspree.io/f/xgojzkon"
+            class="fs-form"
+            target="_top"
+            method="POST"
+          >            
+            <h1>Leave a Message:</h1>
+            <p>Your Name:</p>
+            <input class="fs-input wide" id="name" name="name" required />
+            <p>Email:</p>
+            <input class="fs-input wide" id="email" name="email" required />
+            <p>Message:</p>
             <textarea
-              class="form-control"
-              placeholder="Message"
-              aria-label="Message"
+              class="fs-textarea wide"
+              id="message"
+              name="message"
+              required
             ></textarea>
-          </div>
-          <button id="contact_send" class="hp_button btn btn-outline-light">
-            Send
-          </button>
+            <br>
+            <button class="hp_button btn btn-outline-light" type="submit">Submit</button>
+          </form>
+
         </div>
       </div>
       <div id="popup_background"></div>
     </div>
 
     <div id="copyright">
+      
       <div id="copyright_inner">
-        &copy; Dian Ehrke
-        <div id="current_year">2026</div>
+        <div>
+          <a href="https://www.flaticon.com/free-icons/email" title="email icons" target="_blank">Email icon by Freepik - Flaticon</a>
+        </div>
+        
+        <div>&copy; Dian Ehrke
+          <div id="current_year">2026</div>
+        </div>        
       </div>
     </div>
 
