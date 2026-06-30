@@ -215,7 +215,7 @@ function createParticle (x, y) {
 }
 
 //I DID THE FOLLOWING SECTION BECAUSE IT BOTHERED ME THAT THE LINK AT THE TOP WOULDNT MATCH THE PAGE
-
+//THIS IS THE PAGE CHANGING FUNCTION
 $(window).on("hashchange", function () {
   var currentHash = window.location.hash;
 
