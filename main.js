@@ -104,6 +104,9 @@ function CharIn(spriteNo)
     case 5:
       $("#game_char").attr("src", "images/characters/exct compy.png");
       break;
+    case 6:
+      $("#game_char").attr("src", "images/characters/exct compy 2.png");
+      break;
     default:
       break;
   }
@@ -258,7 +261,7 @@ $(window).on("hashchange", function () {
       $(".active_page").hide().removeClass("active_page");
       $("#contact_page").show().addClass("active_page");   
       hideContactPopup();
-      hideChar();
+      showChar(6);
       break;
     
     case "#portfolio/game1":
