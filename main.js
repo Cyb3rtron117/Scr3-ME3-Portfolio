@@ -84,7 +84,7 @@ function showChar(which)
   $("#game_char").css("left", -($("#game_char").innerWidth() * 1.2) + "px"); //first side will always be left
   $("#game_char").css("top", 200 + "px"); //will always start at the top
   $("#game_char").show();
-  CharIn(which)
+  CharIn(which);
 }
 function CharIn(spriteNo)
 {
@@ -101,6 +101,9 @@ function CharIn(spriteNo)
     case 4:
       $("#game_char").attr("src", "images/characters/GH char.png");
       break;
+    case 5:
+      $("#game_char").attr("src", "images/characters/exct compy.png");
+      break;
     default:
       break;
   }
@@ -115,7 +118,7 @@ function CharOut()
 
 function newSpot()
 {
-  const maxFloored = Math.floor($(".active_game").innerHeight() - $("#game_char").innerHeight() - 30);
+  const maxFloored = Math.floor($(".active_page").innerHeight() - $("#game_char").innerHeight() - 50); //max downward position
   const newYPos = Math.floor(Math.random() * (maxFloored - 100 + 1) + 100);
   $("#game_char").css("top", newYPos + "px");
 
@@ -123,7 +126,7 @@ function newSpot()
   if(newXPos === 1) //right side
   {
     $("#game_char").css("scale", "-1 1");
-    $("#game_char").css("left", $(".active_game").innerWidth() -($("#game_char").innerWidth() * 0.8) + "px");
+    $("#game_char").css("left", $(".active_page").innerWidth() -($("#game_char").innerWidth() * 0.8) + "px");
   }
   else if(newXPos === -1) //left side
   {
@@ -228,66 +231,70 @@ $(window).on("hashchange", function () {
     case "":
     case "#home":
       pages.hide();
-      $("#homepage").show();
-      $(".active_game").hide().removeClass("active_game");
+      $(".active_page").hide().removeClass("active_page"); //hides the active page
+      $("#homepage").show().addClass("active_page"); //adds active page class for the character popup
       hideContactPopup();
       hideChar();
       break;
 
     case "#about":
       pages.hide();
-      $("#about_page").show();
-      $(".active_game").hide().removeClass("active_game");
+      $(".active_page").hide().removeClass("active_page");//hides the active page
+      $("#about_page").show().addClass("active_page");//adds active page class for the character popup
       hideContactPopup();
-      hideChar();
+      showChar(5);
       break;
 
     case "#portfolio":
       pages.hide();
-      $("#portfolio_page").show();
-      $(".active_game").hide().removeClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#portfolio_page").show().addClass("active_page");
       hideContactPopup();
       hideChar();
       break;
 
     case "#contact":
       pages.hide();
-      $("#contact_page").show();
-      $(".active_game").hide().removeClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#contact_page").show().addClass("active_page");   
       hideContactPopup();
       hideChar();
       break;
     
     case "#portfolio/game1":
-      $("#Game_Popup1").show().addClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#Game_Popup1").show().addClass("active_page");
       hideContactPopup();
       showChar(1);
       break;
     case "#portfolio/game2":
-      $("#Game_Popup2").show().addClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#Game_Popup2").show().addClass("active_page");
       hideContactPopup();
       break;
     case "#portfolio/game3":
-      $("#Game_Popup3").show().addClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#Game_Popup3").show().addClass("active_page");
       hideContactPopup();
       showChar(2);
       break;
     case "#portfolio/game4":
-      $("#Game_Popup4").show().addClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#Game_Popup4").show().addClass("active_page");
       hideContactPopup();
       showChar(3);
       break;
     case "#portfolio/game5":
-      $("#Game_Popup5").show().addClass("active_game");
+      $(".active_page").hide().removeClass("active_page");
+      $("#Game_Popup5").show().addClass("active_page");
       hideContactPopup();
       showChar(4);
       break;
 
-    default:
-      // Matches any other page or back-button click
-      // Cleanly hides any open popups
-      $(".active_game").hide().removeClass("active_game");
+    default:      
+      $(".active_page").hide().removeClass("active_page");
       hideContactPopup();
+      hideChar();
       break;
   }
 

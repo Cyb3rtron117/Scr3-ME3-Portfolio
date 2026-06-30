@@ -510,7 +510,8 @@ html, body {
 
 #game_char
 {
-    height: 100px;
+    height: 15vw;
+    max-height: 100px;
     width: auto;
     position: absolute;
     top: 200px;
