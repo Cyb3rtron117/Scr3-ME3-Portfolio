@@ -267,29 +267,34 @@ $(window).on("hashchange", function () {
       break;
     
     case "#portfolio/game1":
+      pages.hide();
       $(".active_page").hide().removeClass("active_page");
       $("#Game_Popup1").show().addClass("active_page");
       hideContactPopup();
       showChar(1);
       break;
     case "#portfolio/game2":
+      pages.hide();
       $(".active_page").hide().removeClass("active_page");
       $("#Game_Popup2").show().addClass("active_page");
       hideContactPopup();
       break;
     case "#portfolio/game3":
+      pages.hide();
       $(".active_page").hide().removeClass("active_page");
       $("#Game_Popup3").show().addClass("active_page");
       hideContactPopup();
       showChar(2);
       break;
     case "#portfolio/game4":
+      pages.hide();
       $(".active_page").hide().removeClass("active_page");
       $("#Game_Popup4").show().addClass("active_page");
       hideContactPopup();
       showChar(3);
       break;
     case "#portfolio/game5":
+      pages.hide();
       $(".active_page").hide().removeClass("active_page");
       $("#Game_Popup5").show().addClass("active_page");
       hideContactPopup();
