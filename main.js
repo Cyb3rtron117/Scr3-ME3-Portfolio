@@ -83,12 +83,8 @@ function showChar(which)
   $("#game_char").css("scale", "1 1");
   $("#game_char").css("left", -($("#game_char").innerWidth() * 1.2) + "px"); //first side will always be left
   $("#game_char").css("top", 200 + "px"); //will always start at the top
-  $("#game_char").show();
-  CharIn(which);
-}
-function CharIn(spriteNo)
-{
-  switch (spriteNo){
+
+  switch (which){
     case 1:
       $("#game_char").attr("src", "images/characters/Ctd char.png");
       break;
@@ -110,6 +106,12 @@ function CharIn(spriteNo)
     default:
       break;
   }
+
+  $("#game_char").show();
+  CharIn();
+}
+function CharIn()
+{
   $("#game_char").removeClass("rotate-out");
   $("#game_char").addClass("rotate-in");
 }
