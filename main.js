@@ -180,8 +180,8 @@ function createParticle (x, y) {
   const size = Math.floor(Math.random() * 20 + 5);
   particle.style.width = `${size}px`;
   particle.style.height = `${size}px`;
-  // Generate a random color in a blue/purple palette
-  particle.style.background = `hsl(${Math.random() * 30 + 30}, 80%, 55%)`;
+  // Generate a random color in a rainbow palette
+  particle.style.background = `hsl(${Math.random() * 360}, 80%, 55%)`;
   
   // Generate a random x & y destination within a distance of 75px from the mouse
   const destinationX = x + (Math.random() - 0.5) * 2 * 75;
