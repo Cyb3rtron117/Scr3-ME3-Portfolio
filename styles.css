@@ -411,6 +411,10 @@ html, body {
 {
     width: 300px;
 }
+.contribution_video
+{
+    width: 80%;
+}
 .contribution_image.small
 {
     width: 200px;
